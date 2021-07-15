@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="300.0" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.rentirs.jcloud.LocalPanelController">
+
+    <HBox>
+        <ComboBox fx:id="disksBox" onAction="#selectDiskAction" />
+        <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS" />
+        <Button onAction="#btnPathUpAction" text="Up" />
+    </HBox>
+
+    <TableView fx:id="filesTable" VBox.vgrow="ALWAYS" />
+</VBox>

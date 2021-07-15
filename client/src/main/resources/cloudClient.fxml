@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" prefHeight="600" prefWidth="1200" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.rentirs.jcloud.CloudClient">
+   <HBox alignment="CENTER" spacing="190.0">
+      <children>
+         <TextField alignment="CENTER" editable="false" focusTraversable="false" text="Local folder" HBox.hgrow="ALWAYS" />
+         <TextField alignment="CENTER" editable="false" focusTraversable="false" text="Server" HBox.hgrow="ALWAYS" />
+      </children>
+      <padding>
+         <Insets left="5.0" right="5.0" top="5.0" />
+      </padding>
+   </HBox>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <fx:include fx:id="local" prefHeight="600.0" prefWidth="500.0" source="panelLocal.fxml" />
+        <VBox alignment="CENTER" spacing="20.0" HBox.hgrow="ALWAYS">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Copy to Server" />
+            <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Copy from Server" />
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+        </VBox>
+        <fx:include fx:id="server" prefHeight="600.0" prefWidth="500.0" source="panelServer.fxml" />
+      <VBox.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </VBox.margin>
+    </HBox>
+</VBox>
